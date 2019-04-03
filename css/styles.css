@@ -1,0 +1,24 @@
+#title-img {
+	width: 250px;
+	float: left;
+}
+
+button, #cat {
+	float: left;
+	clear: left;
+}
+
+#cat-img {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#tummy {
+	font-size: 1.8em;
+}
+
+.angry {
+	font-size: 1.8em;
+	color: red;	
+}
