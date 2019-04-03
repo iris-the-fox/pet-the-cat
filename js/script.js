@@ -20,7 +20,11 @@ document.addEventListener("DOMContentLoaded",
           if (event.shiftKey === true) {
             console.log("x: " + event.clientX);
             console.log("y: " + event.clientY);
-          if ( event.clientX < 1070 && event.clientY < 350 ) {
+          if(event.clientX < 600){document
+            .querySelector("#tummy")
+            .textContent = "Pet me!";   
+          }
+          else if ( event.clientX < 1070 && event.clientY < 350 ) {
                         document
             .querySelector("#tummy")
             .textContent = "Purr! Purr! Purr!";         
