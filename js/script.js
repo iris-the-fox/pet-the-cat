@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded",
                 if (event.shiftKey === true) {
                   console.log("x: " + event.clientX);
                   console.log("y: " + event.clientY);
-                  if ( event.clientX < 470 && event.clientY < 350 ) {
+                  if ( event.clientX < 470 && event.clientY < 350 && event.clientY > 25 ) {
                     document
                       .querySelector("#tummy")
                       .textContent = "Purr! Purr! Purr!";         
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded",
                       .textContent = "Dont touch me!";
  
                   }
-                  else if (event.clientX > 830 ||  event.clientY > 580 ) {
+                  else if (event.clientX > 830 ||  event.clientY > 580 ||  event.clientY < 25 ) {
                     document
                       .querySelector("#tummy")
                       .textContent = "Pet me! Pet me now!";
