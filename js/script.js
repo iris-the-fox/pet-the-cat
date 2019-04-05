@@ -1,14 +1,21 @@
+
+
 document.addEventListener("DOMContentLoaded",
   function (event) {
-  	document.querySelector("button")
-      .addEventListener("click", 
+    var petButton = document.querySelector("#pet-button");
+    var titleImg = document.querySelector("#title-img");
+    var catWellcome = document.querySelector("#cat-wellcome");
+    var catImg = document.querySelector("#cat-img");
+    var title = document.querySelector("#title");
+  	petButton.addEventListener("click", 
       	function(event){
-      		document
-            .querySelector("#cat")
-            .textContent = "Hold Shift to pet the cat";
-                  		document
-            .querySelector("#cat-img")
-            .innerHTML = "<img src='img/Kontur-koshechki_106430.jpg' alt='Погладь кота' id='cat-img'>"
+          catWellcome.textContent = "Hold Shift to pet the cat";
+          console.log(catImg);
+          catImg.innerHTML = "<img src='img/free_stencils_cats-8.png' alt='Погладь кота' id='cat-img'>";
+          console.log(catImg.innerHTML);
+          title.style.display = 'none';
+          petButton.style.display = 'none';
+          titleImg.style.display = 'none';   
       	}
 
       	);

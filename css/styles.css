@@ -1,17 +1,35 @@
+* {
+	font-family: 'Amatic SC', cursive;
+	font-size: 20px;
+}
+
+#title {
+	text-align: center;
+	font-size: 3em;
+	margin: 10px;
+
+}
+
 #title-img {
 	width: 250px;
 	float: left;
+	margin-bottom: 10px;
 }
 
-button, #cat {
+#pet-button {
 	float: left;
 	clear: left;
 }
-
+#cat-wellcome {
+  position: relative;
+  top: 0;
+  left: 0;
+}
 #cat-img {
+	height: 600px;
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: : 0;
 }
 
 #tummy {
