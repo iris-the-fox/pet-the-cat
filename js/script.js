@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded",
   function (event) {
     var petButton = document.querySelector("#pet-button");
@@ -15,46 +13,44 @@ document.addEventListener("DOMContentLoaded",
           console.log(catImg.innerHTML);
           title.style.display = 'none';
           petButton.style.display = 'none';
-          titleImg.style.display = 'none';   
+          titleImg.style.display = 'none';
+          catImg.style.cursor = "move";
+          document.querySelector("html")
+            .addEventListener("mousemove",
+              function (event) {
+                if (event.shiftKey === true) {
+                  console.log("x: " + event.clientX);
+                  console.log("y: " + event.clientY);
+                  if ( event.clientX < 470 && event.clientY < 350 ) {
+                    document
+                      .querySelector("#tummy")
+                      .textContent = "Purr! Purr! Purr!";         
+  
+                  }
+                  else if ((event.clientX > 470 && event.clientX < 580 && event.clientY < 450) || ( event.clientX < 580 && event.clientY > 350 && event.clientY < 415) ) {
+                    document
+                      .querySelector("#tummy")
+                      .textContent = "Dont touch me!";
+ 
+                  }
+                  else if (event.clientX > 830 ||  event.clientY > 580 ) {
+                    document
+                      .querySelector("#tummy")
+                      .textContent = "Pet me! Pet me now!";
+ 
+                  }
+                  else {
+                    document
+                      .querySelector("#tummy")
+                      .innerHTML = "<div class='angry'>Dont touch me! <br> I'll kill you <br> and everyone <br> you love!!!</div>";        
+                  }
+                }
+              });   
       	}
+    );
 
-      	);
-
-
-    document.querySelector("html")
-      .addEventListener("mousemove",
-        function (event) {
-          if (event.shiftKey === true) {
-            console.log("x: " + event.clientX);
-            console.log("y: " + event.clientY);
-          if(event.clientX < 600){document
-            .querySelector("#tummy")
-            .textContent = "Pet me!";   
-          }
-          else if ( event.clientX < 1070 && event.clientY < 350 ) {
-                        document
-            .querySelector("#tummy")
-            .textContent = "Purr! Purr! Purr!";         
-
-          }
-          else if ((event.clientX > 1070 && event.clientX < 1150 && event.clientY < 400) || ( event.clientX < 1070 && event.clientY > 350 && event.clientY < 415) ) {
-                        document
-            .querySelector("#tummy")
-            .textContent = "Dont touch me!";
-
-
-          }
-          else {
-                       document
-            .querySelector("#tummy")
-            .innerHTML = "<div class='angry'>Dont touch me! <br> I'll kill you <br> and everyone <br> you love!!!</div>";        
-          }
-          }
-
-        }
-      );
-
-  })
+}
+)
 
 
 function myFunction() {

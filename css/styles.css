@@ -12,18 +12,26 @@
 
 #title-img {
 	width: 250px;
-	float: left;
+	margin-left: auto;
+	margin-right: auto;
 	margin-bottom: 10px;
+	display: block;
 }
 
 #pet-button {
-	float: left;
-	clear: left;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	font-size: 2em;
 }
+
 #cat-wellcome {
-  position: relative;
+  color: #cc0101;
+  background-color: #ddd;
+  font-size: 1.2em;
+  position: absolute;
   top: 0;
-  left: 0;
+  left: 350px;
 }
 #cat-img {
 	height: 600px;
@@ -33,6 +41,7 @@
 }
 
 #tummy {
+	float: right;
 	font-size: 1.8em;
 }
 
